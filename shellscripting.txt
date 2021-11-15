@@ -1,0 +1,90 @@
+(1)
+#!/bin/bash
+valid=true
+count=1
+while [ $valid ]
+do
+echo $count
+if [ $count -eq 5 ];
+then
+break
+fi
+((count++))
+done:
+o/p:
+****
+1
+2
+3
+4
+5
+
+(2)
+$ cat for.sh
+#!/bin/bash
+#timestable-print out a multiplication table
+for i in 1 2 3
+do
+for j in 1 2 3
+do
+value='expr $i\*$j'
+echo -n "$value"
+done 
+echo
+done
+o/p:
+****
+expr $i\*$jexpr $i\*$jexpr $i\*$j
+expr $i\*$jexpr $i\*$jexpr $i\*$j
+expr $i\*$jexpr $i\*$jexpr $i\*$j
+
+(3)
+#!/bin/sh
+if grep unix myfile
+then
+:
+else
+echo "Sorry, unix was not found"
+fi
+o/p:
+***
+
+grep: myfile: No such file or directory
+Sorry, unix was not found
+
+
+
+
+(4)
+#!/bin/sh
+x=1
+until [ $x -gt 3 ]; do
+echo x = $x
+x=`expr $x + 1`
+done
+o/p:
+***
+x = 1
+x = 2
+x = 3
+
+(5)
+#!/bin/bash
+echo "enter your name"
+read name
+echo "enter your age"
+read age
+if [[ ( $name == "siri" && $age == "40" ) ]];
+then
+echo "you are right"
+else
+echo "you are wrong"
+fi
+o/p:
+**** 
+enter your name
+siri
+enter your age
+19
+you are wrong
+
