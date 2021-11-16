@@ -1,0 +1,72 @@
+(1)
+#!/bin/bash
+((area=5*5))
+echo $area
+o/p:
+***
+25
+
+(2)
+#!/bin/bash
+for (( counter=10; counter>0; counter--))
+do  
+echo -n "$counter"
+done
+printf "\n"
+o/p:
+***
+10987654321
+
+(3)
+#!bin/bash
+
+echo "enter any number"
+read n
+
+if [[ ( $n -eq 15 || $n -eq 45 ) ]]
+then 
+echo "you won the game"
+else
+echo "you lost the game"
+fi
+o/p:
+***
+enter any number
+54
+you lost the game
+
+(4)
+#!bin/bash
+
+echo "enter your lucky number"
+read n
+if [ $n -eq 101 ];
+then 
+echo "you got 1st prize"
+elif [ $n -eq 510 ];
+then
+echo "you got 2nd prize"
+elif [ $n -eq 999 ];
+then
+echo "you got 3rd prize"
+else
+echo "sorry,try for the next time"
+fi
+o/p:
+****
+enter your lucky number
+12
+sorry,try for the next time
+
+(5)
+#!/bin/bash
+smallest=10000
+for i in 5 8 19 8 7 3; do
+if test $i -lt $smallest;then
+smallest=$i
+fi
+done 
+echo $smallest
+o/p:
+****
+3
